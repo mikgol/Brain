@@ -171,4 +171,6 @@ var app = {
     }
 };      // end of app
 
+alert('1a');
 app.initialize();
+alert('1b);
