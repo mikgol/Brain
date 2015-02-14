@@ -18,7 +18,7 @@ var app = {
     initialize: function() {
         this.bindEvents();
         console.log("Starting SimpleSerial app");
-        document.getElementById("message").innerHTML = 'BLAH!';
+        document.getElementById("message").innerHTML = "BLAH!";
     },
 /*
     bind any events that are required on startup to listeners:
@@ -33,7 +33,7 @@ var app = {
 */
     onDeviceReady: function () {
 
-        document.getElementById("message").innerHTML = 'onDeviceReady';
+        document.getElementById("message").innerHTML = "onDeviceReady";
         // check to see if Bluetooth is turned on.
         // this function is called only
         //if isEnabled(), below, returns success:
@@ -65,7 +65,7 @@ var app = {
 */
     manageConnection: function () {
 
-        document.getElementById("message").innerHTML = 'in manageConnection';
+        
 
         // connect() will get called only if isConnected() (below)
         // returns failure. In other words, if not connected, then connect:
@@ -73,6 +73,7 @@ var app = {
             // if not connected, do this:
             // clear the screen and display an attempt to connect
             app.clear();
+            document.getElementById("message").innerHTML = "Attempting to connect. ";
             app.display("Attempting to connect. " +
                 "Make sure the serial port is open on the target device.");
             // attempt to connect:
@@ -102,7 +103,7 @@ var app = {
     and changes the button:
 */
     openPort: function () {
-        document.getElementById("message").innerHTML = 'In openPort';
+        document.getElementById("message").innerHTML = "In openPort";
         // if you get a good Bluetooth serial connection:
         app.display("Connected to: " + app.macAddress);
         // change the button's name:
@@ -120,7 +121,7 @@ var app = {
     unsubscribes from any Bluetooth serial listener and changes the button:
 */
     closePort: function () {
-        document.getElementById("message").innerHTML = 'In closePort';
+        document.getElementById("message").innerHTML = "In closePort";
         // if you get a good Bluetooth serial connection:
         app.display("Disconnected from: " + app.macAddress);
         // change the button's name:
