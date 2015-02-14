@@ -7,7 +7,6 @@
 
 
 var app = {
-    
 
     macAddress: "00:00:12:09:32:96",  // get your mac address from bluetoothSerial.list
     chars: "",
@@ -16,6 +15,7 @@ var app = {
     Application constructor
  */
     initialize: function() {
+        alert('in initialize');
         this.bindEvents();
         console.log("Starting SimpleSerial app");
         document.getElementById("message").innerHTML = "BLAH!";
