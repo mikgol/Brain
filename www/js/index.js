@@ -24,6 +24,7 @@ var app = {
     bind any events that are required on startup to listeners:
 */
     bindEvents: function () {
+        alert('in bindEvents');
         ocument.getElementById("message").innerHTML = "bindEvents";
         document.addEventListener('deviceready', this.onDeviceReady, false);
         connectButton.addEventListener('touchend', app.manageConnection, false);
@@ -67,6 +68,7 @@ var app = {
 */
     manageConnection: function () {
         
+        alert('in manageConnection');
 
         // connect() will get called only if isConnected() (below)
         // returns failure. In other words, if not connected, then connect:
