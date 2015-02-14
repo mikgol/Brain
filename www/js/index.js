@@ -31,7 +31,9 @@ var app = {
 /*
     this runs when the device is ready for user interaction:
 */
-    onDeviceReady: function() {
+    onDeviceReady: function () {
+
+        document.getElementById("message").innerHTML = 'onDeviceReady';
         // check to see if Bluetooth is turned on.
         // this function is called only
         //if isEnabled(), below, returns success:
