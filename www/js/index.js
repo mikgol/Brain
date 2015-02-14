@@ -97,7 +97,8 @@ var app = {
     subscribes to a Bluetooth serial listener for newline
     and changes the button:
 */
-    openPort: function() {
+    openPort: function () {
+        document.getElementById("message").innerHTML = 'In openPort';
         // if you get a good Bluetooth serial connection:
         app.display("Connected to: " + app.macAddress);
         // change the button's name:
@@ -114,7 +115,8 @@ var app = {
 /*
     unsubscribes from any Bluetooth serial listener and changes the button:
 */
-    closePort: function() {
+    closePort: function () {
+        document.getElementById("message").innerHTML = 'In closePort';
         // if you get a good Bluetooth serial connection:
         app.display("Disconnected from: " + app.macAddress);
         // change the button's name:
@@ -130,7 +132,8 @@ var app = {
 /*
     appends @error to the message div:
 */
-    showError: function(error) {
+    showError: function (error) {
+        document.getElementById("message").innerHTML = error;
         app.display(error);
     },
 
