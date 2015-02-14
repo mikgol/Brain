@@ -171,3 +171,4 @@ var app = {
     }
 };      // end of app
 
+app.initialize();
