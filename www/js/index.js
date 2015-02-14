@@ -27,6 +27,7 @@ var app = {
         alert('in bindEvents');
         ocument.getElementById("message").innerHTML = "bindEvents";
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        alert('x');
         connectButton.addEventListener('touchend', app.manageConnection, false);
     },
 
@@ -146,12 +147,14 @@ var app = {
     showError: function (error) {
         document.getElementById("message").innerHTML = error;
         app.display(error);
+        allert(error);
     },
 
 /*
     appends @message to the message div:
 */
     display: function(message) {
+        alert(message);
         var display = document.getElementById("message"), // the message div
             lineBreak = document.createElement("br"),     // a line break
             label = document.createTextNode(message);     // create the label
