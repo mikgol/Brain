@@ -67,6 +67,7 @@ var app = {
 */
     manageConnection: function () {
 
+        alert(bluetoothSerial);
         
 
         // connect() will get called only if isConnected() (below)
