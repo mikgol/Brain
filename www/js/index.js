@@ -63,7 +63,9 @@ var app = {
 /*
     Connects if not connected, and disconnects if connected:
 */
-    manageConnection: function() {
+    manageConnection: function () {
+
+        document.getElementById("message").innerHTML = 'in manageConnection';
 
         // connect() will get called only if isConnected() (below)
         // returns failure. In other words, if not connected, then connect:
