@@ -23,7 +23,8 @@ var app = {
 /*
     bind any events that are required on startup to listeners:
 */
-    bindEvents: function() {
+    bindEvents: function () {
+        ocument.getElementById("message").innerHTML = "bindEvents";
         document.addEventListener('deviceready', this.onDeviceReady, false);
         connectButton.addEventListener('touchend', app.manageConnection, false);
     },
@@ -33,7 +34,8 @@ var app = {
 */
     onDeviceReady: function () {
 
-        document.getElementById("message").innerHTML = "onDeviceReady";
+        //document.getElementById("message").innerHTML = "onDeviceReady";
+
         // check to see if Bluetooth is turned on.
         // this function is called only
         //if isEnabled(), below, returns success:
